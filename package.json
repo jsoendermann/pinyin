@@ -6,6 +6,7 @@
     "bin",
     "data",
     "lib",
+    "dist",
     "index.js",
     "src"
   ],
@@ -18,7 +19,7 @@
   ],
   "homepage": "http://pinyin.hotoo.me/",
   "author": "闲耘 <hotoo.cn@gmail.com>",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "bin": {
     "pinyin": "./bin/pinyin"
   },
@@ -34,7 +35,9 @@
     "url": "https://github.com/hotoo/pinyin/issues"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "build": "babel lib -d dist",
+    "install": "npm run build"
   },
   "dependencies": {
     "commander": "~1.1.1",
@@ -44,6 +47,8 @@
     "nodejieba": "^2.2.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-latest": "^6.22.0",
     "benchmark": "~1.0.0",
     "eslint": "~0.24.0",
     "expect.js": "0.3.1",
