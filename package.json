@@ -36,7 +36,7 @@
   },
   "scripts": {
     "test": "make test",
-    "build": "babel lib -d dist",
+    "build": "./node_modules/babel-cli/bin/babel.js lib -d dist",
     "install": "npm run build"
   },
   "dependencies": {
